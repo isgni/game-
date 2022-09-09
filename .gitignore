@@ -1,0 +1,26 @@
+<script> 
+
+var score = 0;
+var left=400;
+var top = 100;
+
+function play() {
+  var game = document.getElementById('game');
+  var firstDiv = document.getElementById('firstDiv');
+  var height = window.innerHeight;
+  var width = window.innerWidth;
+  firstDiv.style.display='none';
+  game.style.display='block';
+  setInterval("move()", 1000);
+}
+
+function move() {
+  var randomNumberX=Math.floor(Math.random()*11)-5;
+  var randomNumberY=Math.floor(Math.random()*11)-5;
+  left= left+randomNumberX;
+  top = top+randomNumberY;
+  var im= document.getElementById('image');
+  im.style.left=left;
+  im.style.top=top;
+}
+</script>
